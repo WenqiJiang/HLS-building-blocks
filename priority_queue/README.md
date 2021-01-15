@@ -12,7 +12,7 @@ Optimized for resource consumption and performance. Everything is wrapped in a s
 
 The wrapper function: take x inputs from input stream to the priority queue, and then return the contents in the queue to output stream.
 
-Insert_num = 1024
+Insert_num = 1024, queue_size = 10
 
 ```
 + Latency: 
@@ -87,7 +87,7 @@ Insert_num = 1024
 
 Allows for many member function calls, at the price of high resource consumption and slightly lower performance (at head and tail, thus negligible if the loop count is large).
 
-Insert_num = 1024
+Insert_num = 1024, queue_size = 10
 
 ```
 + Latency: 
@@ -167,7 +167,7 @@ Insert_num = 1024
 
 Similar to priority_queue_optimized, but move the priority queue array from the wrapper function to the class member. It instantly increase the resource consumption.
 
-Insert_num = 1024
+Insert_num = 1024, queue_size = 10
 
 ```
 
