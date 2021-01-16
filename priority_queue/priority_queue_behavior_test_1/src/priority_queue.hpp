@@ -41,7 +41,7 @@ class Priority_queue<T, queue_size, Collect_smallest> {
             insert: 
             for (int i = 0; i < iter_num; i++) {
 #pragma HLS pipeline II=1
-                float reg = s_input.read();
+                T reg = s_input.read();
                 queue[0] = queue[0] < reg? queue[0] : reg;
 
                 // start from idx 0, odd-even swap

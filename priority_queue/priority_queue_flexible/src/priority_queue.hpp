@@ -56,7 +56,7 @@ class Priority_queue<T, queue_size, Collect_smallest> {
         void insert(hls::stream<T> &s_input) {
             // insert: from a stream
 #pragma HLS inline
-            float reg = s_input.read();
+            T reg = s_input.read();
             queue[0] = queue[0] < reg? queue[0] : reg;
             compare_swap_array_step_A();
             compare_swap_array_step_B();
